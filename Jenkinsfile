@@ -19,7 +19,7 @@ pipeline {
        stage('Deploy') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
-                sleep(60)
+                sleep 60s
                 sh './jenkins/scripts/kill.sh'
             }
         }
